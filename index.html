@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Thalita 💖</title>
+
+  <!-- Fonte fofa do Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #fff0f5;
+      font-family: 'Quicksand', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      color: #ff5e99;
+      text-align: center;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    p {
+      font-size: 1.3rem;
+      color: #ff3399;
+      text-align: center;
+      max-width: 500px;
+      padding: 0 1rem;
+      font-weight: 500;
+    }
+
+    .heart {
+      font-size: 3.5rem;
+      animation: pulse 1s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+
+    .button-container {
+      margin-top: 2rem;
+    }
+
+    button {
+      background-color: #ff80bf;
+      color: white;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      border-radius: 30px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      margin: 0 10px;
+      transition: all 0.3s ease;
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 600;
+    }
+
+    button:hover {
+      background-color: #ff4d94;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .final-message {
+      font-size: 2rem;
+      color: #cc0066;
+      margin-top: 2rem;
+      animation: fadeIn 1s ease forwards;
+      font-weight: 600;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    audio {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Oi, Thalita 💖</h1>
+  <p>Você é aquela pessoa que deixa meus dias mais doces, meu coração mais quentinho e meu sorriso mais bobo.</p>
+  <div class="heart">💗</div>
+  <p>Então... eu queria te perguntar uma coisinha bem importante...</p>
+  <p><strong>Você quer namorar comigo? 🥺💕</strong></p>
+
+  <div class="button-container">
+    <button onclick="resposta('sim')">Sim! 💕</button>
+    <button onclick="resposta('claro')">Claro! 😍</button>
+  </div>
+
+  <div id="mensagemFinal" class="final-message hidden">
+    Aaaaaa! Agora somos um casal oficial 💑<br />
+    Prometo cuidar de você com todo meu carinho 💘
+  </div>
+
+  <!-- Música de fundo fofa -->
+  <audio autoplay loop>
+    <source src="https://files.catbox.moe/yvbfvt.mp3" type="audio/mp3">
+    Seu navegador não suporta áudio.
+  </audio>
+
+  <script>
+    function resposta(opcao) {
+      document.querySelector('.button-container').classList.add('hidden');
+      document.getElementById('mensagemFinal').classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>
